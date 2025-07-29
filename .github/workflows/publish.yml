@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         
-      - name: Setup Node.js
+      - name: Setup Node.js for GitHub Packages
         uses: actions/setup-node@v4
         with:
           node-version: '18'
@@ -33,19 +33,28 @@ jobs:
       - name: Build package
         run: pnpm run build
         
+      - name: Configure package for GitHub Packages
+        run: |
+          cp package.json package.json.backup
+          jq '.publishConfig.registry = "https://npm.pkg.github.com"' package.json > package.github.json
+          mv package.github.json package.json
+        
       - name: Publish to GitHub Packages
         run: pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Restore original package.json
+        run: mv package.json.backup package.json
 
   publish-npm:
     runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch'
+    if: startsWith(github.ref, 'refs/tags/v') || github.event_name == 'workflow_dispatch'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         
-      - name: Setup Node.js
+      - name: Setup Node.js for NPM
         uses: actions/setup-node@v4
         with:
           node-version: '18'

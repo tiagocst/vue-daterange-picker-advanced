@@ -8,7 +8,7 @@
   "style": "dist/vue-daterange-picker-advanced.css",
   "types": "dist/index.d.ts",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "files": [
     "dist",
