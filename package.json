@@ -1,0 +1,80 @@
+{
+  "name": "@tiagocst/vue-daterange-picker-advanced",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Advanced Vue 3 DateRange Picker with responsive design, sidebar layout and timezone safety",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "style": "dist/vue-daterange-picker-advanced.css",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "files": [
+    "dist",
+    "src", 
+    "nuxt",
+    "README.md",
+    "NUXT.md",
+    "LICENSE",
+    "examples"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "nuxt",
+    "nuxt3", 
+    "daterange",
+    "datepicker",
+    "calendar",
+    "responsive",
+    "component",
+    "sidebar",
+    "timezone-safe",
+    "ssr"
+  ],
+  "author": "Tiago Costa <tiago@tiagocosta.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tiagocst/vue-daterange-picker-advanced.git"
+  },
+  "homepage": "https://github.com/tiagocst/vue-daterange-picker-advanced#readme",
+  "bugs": {
+    "url": "https://github.com/tiagocst/vue-daterange-picker-advanced/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0",
+    "pnpm": ">=7.0.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "nuxt": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@tailwindcss/postcss": "^4.1.11",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/compiler-sfc": "^3.3.8",
+    "autoprefixer": "^10.4.21",
+    "rollup": "^4.6.1",
+    "rollup-plugin-esbuild": "^6.2.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-vue": "^6.0.0",
+    "tailwindcss": "^4.1.11",
+    "typescript": "^5.2.2",
+    "vite": "^7.0.6"
+  }
+}
