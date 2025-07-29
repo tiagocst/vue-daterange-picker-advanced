@@ -1,6 +1,6 @@
 {
   "name": "@tiagocst/vue-daterange-picker-advanced",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "description": "Advanced Vue 3 DateRange Picker with responsive design, sidebar layout and timezone safety",
   "main": "dist/index.cjs",
