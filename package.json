@@ -1,10 +1,10 @@
 {
   "name": "@tiagocst/vue-daterange-picker-advanced",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Advanced Vue 3 DateRange Picker with responsive design, sidebar layout and timezone safety",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.es.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "style": "dist/vue-daterange-picker-advanced.css",
   "types": "dist/index.d.ts",
   "publishConfig": {
@@ -29,33 +29,26 @@
     "vue",
     "vue3",
     "nuxt",
-    "nuxt3", 
-    "daterange",
+    "nuxt3",
     "datepicker",
+    "daterange",
     "calendar",
     "responsive",
-    "component",
-    "sidebar",
-    "timezone-safe",
-    "ssr"
+    "typescript",
+    "component"
   ],
-  "author": "Tiago Costa <tiago@tiagocosta.dev>",
+  "author": "Tiago Costa <tiago@exemplo.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tiagocst/vue-daterange-picker-advanced.git"
+    "url": "git+https://github.com/tiagocst/vue-daterange-picker-advanced.git"
   },
-  "homepage": "https://github.com/tiagocst/vue-daterange-picker-advanced#readme",
   "bugs": {
     "url": "https://github.com/tiagocst/vue-daterange-picker-advanced/issues"
   },
-  "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=8.0.0",
-    "pnpm": ">=7.0.0"
-  },
+  "homepage": "https://github.com/tiagocst/vue-daterange-picker-advanced#readme",
   "peerDependencies": {
-    "vue": "^3.0.0"
+    "vue": "^3.3.0"
   },
   "peerDependenciesMeta": {
     "nuxt": {
@@ -63,18 +56,14 @@
     }
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-typescript": "^11.1.5",
-    "@tailwindcss/postcss": "^4.1.11",
-    "@vitejs/plugin-vue": "^6.0.1",
-    "@vue/compiler-sfc": "^3.3.8",
-    "autoprefixer": "^10.4.21",
-    "rollup": "^4.6.1",
-    "rollup-plugin-esbuild": "^6.2.1",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-vue": "^6.0.0",
-    "tailwindcss": "^4.1.11",
-    "typescript": "^5.2.2",
-    "vite": "^7.0.6"
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/compiler-sfc": "^3.4.21",
+    "autoprefixer": "^10.4.19",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.3",
+    "vite": "^5.2.8"
+  },
+  "dependencies": {
+    "vue": "^3.4.21"
   }
 }

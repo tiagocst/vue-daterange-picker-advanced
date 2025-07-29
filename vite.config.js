@@ -3,12 +3,20 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue({
+    template: {
+      compilerOptions: {
+        compatConfig: {
+          MODE: 3
+        }
+      }
+    }
+  })],
   build: {
     lib: {
       entry: resolve(__dirname, 'index.js'),
       name: 'VueDateRangePickerAdvanced',
-      fileName: (format) => `index.${format}.js`,
+      fileName: (format) => `index.${format === 'es' ? 'js' : format}`,
       formats: ['es', 'cjs']
     },
     rollupOptions: {
@@ -21,9 +29,10 @@ export default defineConfig({
     },
     outDir: 'dist',
     emptyOutDir: true,
-    ssr: true // Enable SSR compatibility
+    target: 'node14'
   },
-  ssr: {
-    noExternal: ['vue-daterange-picker-advanced']
+  define: {
+    __VUE_OPTIONS_API__: true,
+    __VUE_PROD_DEVTOOLS__: false
   }
 })
